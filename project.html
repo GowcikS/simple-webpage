@@ -1,0 +1,103 @@
+<!-- Simple single-file webpage for Gowcik -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gowcik — About Me</title>
+  <style>
+    :root{
+      --bg:#0f1724; /* deep navy */
+      --card:#0b1220;
+      --accent:#7dd3fc;
+      --muted:#94a3b8;
+      --glass: rgba(255,255,255,0.03);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(180deg,var(--bg), #071021);
+      color:#e6eef8;
+      padding:32px;
+    }
+    .card{
+      width:100%;
+      max-width:900px;
+      background:linear-gradient(180deg,var(--card), rgba(11,18,32,0.7));
+      border-radius:16px;
+      box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+      display:grid;
+      grid-template-columns: 320px 1fr;
+      gap:24px;
+      padding:28px;
+      align-items:center;
+      backdrop-filter: blur(6px);
+    }
+    .photo{
+      width:100%;
+      height:320px;
+      border-radius:12px;
+      overflow:hidden;
+      background:var(--glass);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .photo img{width:100%;height:100%;object-fit:cover;display:block}
+    h1{margin:0 0 8px 0;font-size:28px}
+    p.lead{margin:0 0 16px 0;color:var(--muted);line-height:1.5}
+    .meta{display:flex;gap:8px;flex-wrap:wrap}
+    .pill{background:rgba(255,255,255,0.03);padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,0.03);font-size:13px;color:var(--muted)}
+    .bio{font-size:15px;line-height:1.6;color:#dce8f8}
+    .actions{margin-top:18px}
+    a.button{
+      display:inline-block;text-decoration:none;padding:10px 14px;border-radius:10px;font-weight:600;
+      border:1px solid rgba(125,211,252,0.15);
+      background:linear-gradient(180deg, rgba(125,211,252,0.06), rgba(125,211,252,0.02));
+      color:var(--accent);
+    }
+    footer{margin-top:18px;color:var(--muted);font-size:13px}
+
+    /* Responsive */
+    @media (max-width:760px){
+      .card{grid-template-columns:1fr;max-width:520px}
+      .photo{height:220px}
+    }
+  </style>
+</head>
+<body>
+  <main class="card" role="main">
+    <div>
+      <div class="photo" aria-hidden="false">
+        <!-- Replace the src URL below with your own image if you like -->
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1400&auto=format&fit=crop&crop=faces" alt="Portrait image">
+      </div>
+      <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+        <span class="pill">Intern</span>
+        <span class="pill">Web / Frontend</span>
+        <span class="pill">HTML & CSS</span>
+      </div>
+    </div>
+
+    <section>
+      <h1>Gowcik</h1>
+      <p class="lead">Hi — I'm Gowcik. I'm currently completing an internship focused on web development. I love building clean, responsive UIs and learning new web technologies.</p>
+
+      <div class="bio">
+        <p>Short biography: I enjoy turning design ideas into working websites. During this internship I aim to strengthen my HTML/CSS skills, learn JavaScript fundamentals, and build accessible, mobile-friendly pages.</p>
+
+        <div class="actions">
+          <a class="button" href="#contact">Contact</a>
+        </div>
+
+        <footer id="contact">Want changes? Try editing this file — replace the text and the image URL, then save as <code>index.html</code> and open it in your browser.</footer>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
